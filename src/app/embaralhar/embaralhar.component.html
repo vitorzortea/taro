@@ -1,0 +1,11 @@
+<section id="embaralhar">
+  <p>Respire fundo 3 veze e reflita em um aspecto da sua vida e o que mais te aflinge. <br>Após a sua reflexão, clique em “Tirar as cartas”</p>
+
+  <div id="all-baralho">
+    <div class="carta" *ngFor="let baralho of baralhoServer.baralho; let i=index">
+      <img src="/assets/cartas/{{i}}.png" alt="{{baralho.titulo}}" />
+      <img src="/assets/cartas/capa.png" alt="Carta" />
+    </div>
+  </div>
+  <button routerLink="/ler">Tirar as cartas</button>
+</section>

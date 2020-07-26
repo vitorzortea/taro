@@ -1,0 +1,79 @@
+#tarot-sys
+  display flex
+  align-items center
+  justify-content center
+  width 100%
+  min-height 100vh
+  overflow hidden
+  position relative
+
+  main
+    display table
+    position relative
+    z-index 2
+    width 100%
+    max-width 1080px
+
+
+  #bg-sky
+    position fixed
+    top 0
+    left 0
+    z-index 1
+    width 100%
+    height 100%
+    overflow hidden
+
+    span
+      position absolute
+      width 100%
+      height 100%
+      background-position center
+      background-size cover
+
+      &:nth-child(1)
+        background-image url('../assets/bg/1.jpg')
+        z-index 1
+        mix-blend-mode multiply
+        animation nuvem 40s infinite
+
+      &:nth-child(2)
+        background-image url('../assets/bg/2.png')
+        z-index 3
+        animation star 2s infinite
+
+      &:nth-child(3)
+        background-image url('../assets/bg/3.png')
+        animation star 2.5s infinite
+        z-index 4
+
+      &:nth-child(4)
+        animation star 3s infinite
+        background-image url('../assets/bg/4.png')
+        z-index 5
+
+      &:nth-child(5)
+        background linear-gradient(28deg, #251933 0%, #98368f 50%, #dc10a7 100%)
+        z-index 2
+        mix-blend-mode multiply
+
+
+@keyframes nuvem
+  0%
+    transform scale(1) rotate(0deg)
+  50%
+    transform scale(1.5) rotate(10deg)
+  100%
+    transform scale(1) rotate(0deg)
+
+
+@keyframes star
+  0%
+    opacity 0
+    filter blur(1px)
+  50%
+    opacity 1
+    filter blur(3px)
+  100%
+    opacity 0
+    filter blur(1px)

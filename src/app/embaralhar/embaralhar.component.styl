@@ -1,0 +1,116 @@
+#embaralhar
+  width 100%
+  max-width 1080px
+
+  p
+    color white
+    font-size 17px
+    width 100%
+    text-align center
+
+
+
+  button
+    display table
+    margin -50px auto 0
+    border solid 4px white
+    padding 25px 50px
+    line-height 0
+    color white
+    font-weight bold
+    text-transform uppercase
+    font-size 20px
+    position relative
+    z-index 2
+    border-radius 15px
+    background linear-gradient(28deg, #FE5B61 0%, #ED5686 100%)
+    transition 0.5s
+
+    &:hover
+      cursor pointer
+      transform scale(1.1)
+
+    &:active
+      transform scale(0.9)
+
+  #all-baralho
+    display flex
+    padding 20px
+    width 90%
+    transform translate(10%)
+    font-weight bold
+    line-height 1.3em
+
+    &>div
+      overflow hidden
+      border-radius 15px
+      border solid 5px white
+      margin-left -10%
+      line-height 0
+      position relative
+
+      img:first-child
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        z-index -1
+
+      &:hover
+        position: relative;
+        z-index: 2;
+        animation virar 1s forwards cubic-bezier(0.5, 0.0, 0.0, 0.5)
+
+      &:hover>img:first-child
+        animation virar-imagem 1s forwards cubic-bezier(0.5, 0.0, 0.0, 0.5)
+
+
+@keyframes virar
+  0%
+    transform rotate3d(0, 1, 0, 0deg) scale(1)
+  100%
+    transform rotate3d(0, 1, 0, 180deg) scale(1.1)
+
+
+@keyframes virar-imagem
+  0%
+    z-index -1
+    transform scalex(-1)
+  20%
+    z-index -1
+    transform scalex(-1)
+  100%
+    transform scalex(-1)
+    z-index 2
+
+@media only screen and (max-device-width: 600px)
+  #embaralhar
+    display flex
+    flex-wrap wrap
+
+    p
+      font-size 14px
+      line-height 1.2em
+      order 1
+      padding 20px 10px 0
+
+      br
+        display none
+
+    &>div
+      order 3
+      margin 0
+      flex-wrap wrap
+      align-items: center
+      margin-bottom -10px
+
+      &>div
+        width 33.333%
+        margin-bottom 10px
+        border-radius 10px
+        border solid 4px #fff
+
+    button
+      order 2
+      margin 20px auto 0px

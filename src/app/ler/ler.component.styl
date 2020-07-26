@@ -1,0 +1,130 @@
+#ler
+  padding 10px
+  width 100%
+  max-width 1080px
+
+  &>p
+    color white
+    font-size 17px
+    width 100%
+    text-align center
+
+  #cartas-tiradas
+    display flex
+    justify-content center
+    padding-top 40px
+
+  #cartas-tiradas>div
+    &:nth-child(1)>div
+      animation virar 1s forwards cubic-bezier(0.5, 0.0, 0.0, 0.5)
+      animation-delay 0.5s
+
+      img:first-child
+        animation virar-imagem 1s forwards cubic-bezier(0.5, 0.0, 0.0, 0.5)
+        animation-delay 0.5s
+
+    &:nth-child(2)>div
+      animation virar 1s forwards cubic-bezier(0.5, 0.0, 0.0, 0.5)
+      animation-delay 1s
+
+      img:first-child
+        animation virar-imagem 1s forwards cubic-bezier(0.5, 0.0, 0.0, 0.5)
+        animation-delay 1s
+
+    &:nth-child(3)>div
+      animation virar 1s forwards cubic-bezier(0.5, 0.0, 0.0, 0.5)
+      animation-delay 1.5s
+
+      img:first-child
+        animation virar-imagem 1s forwards cubic-bezier(0.5, 0.0, 0.0, 0.5)
+        animation-delay 1.5s
+
+  #cartas-tiradas>div>div
+    max-width 200px
+    margin 0 20px
+    line-height 0
+    overflow hidden
+    border-radius 15px
+    border solid 5px white
+    position relative
+    z-index 2
+
+    img
+      width 100%
+
+    img:first-child
+      position absolute
+      top 0
+      left 0
+      z-index -1
+
+  #cartas-tiradas>div>span
+    display table
+    background-color rgba(0,0,0,0.7)
+    width 30px
+    height 30px
+    margin -15px auto 10px
+    transform rotate(45deg)
+
+  #cartas-tiradas>div>p
+    color white
+    font-size 22px
+    width 100%
+    text-align center
+    font-weight bold
+    text-transform uppercase
+
+  .box-text
+    background rgba(0,0,0,0.3)
+    padding 10px
+    border-radius 20px
+    color white
+    margin-top 20px
+
+    span
+      display: table
+      padding 20px
+      border-radius 10px
+      border solid 2px white
+
+    h2
+      font-size 20px
+
+    p
+      padding-bottom 20px
+
+
+
+
+@keyframes virar
+  0%
+    transform rotate3d(0, 1, 0, 0deg)
+  100%
+    transform rotate3d(0, 1, 0, 180deg)
+
+
+@keyframes virar-imagem
+  0%
+    z-index -1
+    transform scalex(-1)
+  20%
+    z-index -1
+    transform scalex(-1)
+  100%
+    transform scalex(-1)
+    z-index 2
+
+@media only screen and (max-device-width: 600px)
+  #ler>p
+    font-size 14px
+    line-height 1.2em
+
+    br
+      display none
+
+  #cartas-tiradas
+    flex-direction column
+    align-items center
+
+    &>div
+      padding-bottom 20px

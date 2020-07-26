@@ -1,0 +1,40 @@
+<section id="ler">
+  <p>Essas cartas foram tiradas para remeter exclusivamente ao seu <br/>pensamento mais forte enquanto estávamos embaralhando.</p>
+  <div id="cartas-tiradas">
+    <div>
+      <div>
+        <img src="/assets/cartas/{{baralhoServer.carta1.numero}}.png" alt="{{baralhoServer.carta1.titulo}}" />
+        <img src="/assets/cartas/capa.png" alt="Carta" />
+      </div>
+      <span></span>
+      <p>Passado</p>
+    </div>
+    <div>
+      <div>
+        <img src="/assets/cartas/{{baralhoServer.carta2.numero}}.png" alt="{{baralhoServer.carta2.titulo}}" />
+        <img src="/assets/cartas/capa.png" alt="Carta" />
+      </div>
+      <span></span>
+      <p>Presente</p>
+    </div>
+    <div>
+      <div>
+        <img src="/assets/cartas/{{baralhoServer.carta3.numero}}.png" alt="{{baralhoServer.carta3.titulo}}" />
+        <img src="/assets/cartas/capa.png" alt="Carta" />
+      </div>
+      <span></span>
+      <p>Futuro</p>
+    </div>
+  </div>
+
+  <div class="box-text">
+    <span>
+      <h2>Passado</h2>
+      <p>A carta que remete ao passado é {{baralhoServer.carta1.titulo}}. Essa carta pode indicar {{baralhoServer.carta1.passado}}</p>
+      <h2>Presente</h2>
+      <p>A carta que remete ao presente é {{baralhoServer.carta2.titulo}}. Essa carta pode indicar {{baralhoServer.carta2.presente}}</p>
+      <h2>Futuro</h2>
+      <p>A carta que remete ao futuro é {{baralhoServer.carta3.titulo}}. Essa carta pode indicar {{baralhoServer.carta3.futuro}}</p>
+    </span>
+  </div>
+</section>
